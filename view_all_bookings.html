@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Yatra</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style_view_all_bookings.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+    <div class="yatra-view-bookings">
+        <!-- desktop header -->
+        <div class="yt-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="https://www.yatra.com/?_ga=2.91498266.1241220654.1608950245-733998492.1608804414"
+                    title="https://www.yatra.com" class="logo">
+                    <img src="https://www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg" class="yt-logo" alt="">
+                  </a>
+                </div>
+                <div class="col-sm-8">
+                  <nav class="navbar navbar-expand-sm">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                          My Account
+                        </a>
+                        <div class="dropdown-menu yt-hotel-header-dropdown">
+                          <div class="yt-hotel-header-usericon">
+                            <i class="fa fa-user-circle"></i>
+                          </div>
+                          <div class="container">
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> My Bookings
+                            </div>
+      
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> My eCash
+                            </div>
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> My Profile
+                            </div>
+                            <div class="yt-hotel-header-content">
+                              <i class="yt-fa-play"></i> Logout
+                            </div>
+                          </div>
+                          <div class="yt-hotel-dropdown-break"></div>
+                          <div class="container">
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Yatra for Business
+                            </div>
+      
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Yatra for Travel Agents
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                          Support
+                        </a>
+                        <div class="dropdown-menu yt-hotel-header-dropdown">
+                          <div class="container">
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Contact us
+                            </div>
+      
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Complete Booking
+                            </div>
+      
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Make a Payment
+                            </div>
+      
+                            <div class="yt-hotel-header-content">
+                              <i class="fa fa-play yt-fa-play"></i> Flight Cancellation Charges
+                            </div>
+                          </div>
+      
+                        </div>
+                      </li>
+      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                          Recent Search
+                        </a>
+                        <div class="dropdown-menu yt-hotel-header-recent">
+                          <div class="container">
+                            <div class="row" style="width:100%">
+                              <div class="col-sm-9 yt-hotel-recent">
+                                Things you view while searching are saved here
+                              </div>
+                              <div class="col-sm-3 yt-hotel-recent-price">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+      
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <!-- mobile header -->
+        <div class="yt-mobile-header" id="mobile-header">
+        <div class="row">
+            <div class="col-4">
+            <span>
+                <button data-target="#mobile-head-expand" onclick="myFunction()">
+                <img src="images_my_bookings/header-mobile-nav.png" alt="">
+                </button>
+            </span>
+            </div>
+            <div class="col-8">
+            <img src="https://www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg" alt="">
+            </div>
+        </div>
+        </div>
+
+        <!-- mobile header navbar -->
+        <div class="yt-mobile-head-expand" id="mobile-head-expand">
+        <a href="javascript:void(0)" onclick="closeNav()">X</a>
+        <div class="header-expand-profile">
+            <span>
+            <i class="fa fa-user-circle"></i>
+            </span>
+            <div class="yt-display">
+            <h3>Diya</h3> 
+            <div>eCash</div>
+            </div>
+        </div>
+        <div class="header-expand-details">
+            <div>  
+            <span>
+                <img src="images_my_bookings/header_user.png" alt="">
+                My Account
+                <i class="fa fa-plus"></i>
+                </span>
+            </div>
+            <div>
+            <span>
+                <img src="images_my_bookings/header_info.png" alt="">
+                Support
+                <i class="fa fa-plus"></i>
+            </span>
+            </div>
+            <div>
+            <span>
+                <img src="images_my_bookings/categories.png" alt="">
+                Categories
+                <i class="fa fa-plus"></i>
+            </span>
+            </div>         
+            <div>
+            <span>
+                <img src="images_my_bookings/logout.png" alt="">
+                Logout
+            </span>
+            </div>       
+        </div>
+        </div>    
+
+        <div class="yatra-view-bookings-main-div">
+            <div class="container">
+                <h3 class="yt-main-head">Dashboard / </h3>
+                <div class="row">
+                    <div class="col-md-3 col-12">
+                        <div class="yt-side-bar">
+                            <ul>
+                                <li><i class="fa fa-home"></i>DASHBOARD</li>
+                                <li><i class="fa fa-plane"></i>ALL BOOKINGS</li>
+                                <li>
+                                    <i class="fa fa-pencil-square-o"></i>MODIFY BOOKINGS
+                                    <button onclick="modify_booking()"><i class="fa fa-angle-down"></i></button>
+                                </li>
+                                <li class="drop-down-expand" id="modifybooking">
+                                    <div>
+                                        <ul>
+                                            <li><i class="fa fa-play"></i>Cancel</li>
+                                            <li><i class="fa fa-play"></i>Reschedule</li>
+                                            <li><i class="fa fa-play"></i>Cancellation Charges</li>
+                                            <li><i class="fa fa-play"></i>Reschedule Charges</li>
+                                            <li><i class="fa fa-play"></i>Make Payment</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa fa-ticket-alt"></i>TICKET / VOUCHERS
+                                    <button onclick="ticket()"><i class="fa fa-angle-down"></i></button>
+                                </li>
+                                <li class="drop-down-expand" id="ticket">
+                                    <div>
+                                        <ul>
+                                            <li><i class="fa fa-play"></i>SMS / Email Ticket</li>
+                                            <li><i class="fa fa-play"></i>Print Invoice / Receipt</li>
+                                            <li><i class="fa fa-play"></i>Print Ticket</li>
+                                            <li><i class="fa fa-play"></i>Voucher</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><i class="fa fa-rupee"></i>CLAIM REFUND / FILE TDR</li>
+                                <li><i class="fa fa-list"></i>FLIGHT REFUND STATUS</li>
+                                <li>
+                                    <i class="fa fa-money-bill-alt"></i>ECASH
+                                    <button onclick="ecash()"><i class="fa fa-angle-down"></i></button>
+                                </li>
+                                <li class="drop-down-expand" id="ecash">
+                                    <div>
+                                        <ul>
+                                            <li><i class="fa fa-play"></i>Summary</li>
+                                            <li><i class="fa fa-play"></i>Transfer</li>
+                                            <li><i class="fa fa-play"></i>Convert To Coupons</li>
+                                            <li><i class="fa fa-play"></i>My Coupons</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><i class="fa fa-user"></i>YOUR PROFILE</li>
+                                <li><i class="fa fa-pencil-alt"></i>YOUR COMMUNICATION</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-12">
+                        <div class="main-div list">
+                            <button id="slideLeft" type="button">&lt;</button>
+                            <div id="container-top-main-div">
+                                <div id="content">
+                                    <ul>
+                                        <li>ALL</li>
+                                        <li>FLIGHTS</li>
+                                        <li>HOTELS</li>
+                                        <li>HOMESTAYS</li>
+                                        <li>FLIGTS + HOTELS</li>
+                                        <li>BUSES</li>
+                                        <li>TRAINS</li>
+                                        <li>ACTIVITIES</li>
+                                        <li>HOLIDAYS</li>
+                                        <li>MONUMENTS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button id="slideRight" type="button">></button>
+                        </div>
+                        <div class="main-div-content">
+                          <div class="yt-support" id="support">
+                            <p>
+                              For information on bookings older than 24 months, email us at <a href="mailto:support@yatra.com">support@yatra.com</a><button onclick="closesupport()">X</button>
+                            </p>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-6">
+                              <button class="yt-cab-cancel">Cab Cancellation</button>
+                            </div>
+                            <div class="col-nd-6 col-6">
+                              <div class="form-group">
+                                <label for="sel1">Filter / Sort By</label>
+                                <select class="form-control" id="sel1">
+                                  <option>Relevance</option>
+                                  <option>Upcoming</option>
+                                  <option>Completed</option>
+                                  <option>Cancelled</option>
+                                  <option>Booking date</option>
+                                </select>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="yt-booking-details">
+                            <div class="yt-booking-details-name">
+                              <div class="row"> 
+                                <div class="col-md-4 col-6">
+                                  <i class="fa fa-plane"></i>
+                                  Total Passenger(s):1
+                                  <p>ADULT:1</p>
+                                </div>
+                                <div class="col-md-8 col-6">
+                                  <span class="yt-booking-info">Booked On:<b>25 Apr'19</b> | Booking Ref No:2504969145257</span>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="yt-booking-details-content">
+                              <div class="row vcenter">
+                                <div class="col-md-8 col-12 yt-border-right">
+                                  <div class="row vcenter">
+                                    <div class="col-md-4 col-4 yt-pr">
+                                      <div class="yt-flight-details">
+                                        IndiGo(6E-856)
+                                        <p>Economy</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Ahemadabad
+                                        <p>25 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Mr Janarthan C M
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                    <div class="col-md-4 col-4 yt-pl yt-pr">
+                                      <div class="yt-flight-details">
+                                        PNR:JJ5RQQ
+                                        <p>Partially Refundable</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Coimbatore
+                                        <p>26 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Status : <a>Completed</a>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                  <div class="row">
+                                    <div class="col-md-6 col-6 yt-pr">
+                                      <button class="yt-booking-details-button">Fare Details</button>
+                                    </div>
+                                    <div class="col-md-6 col-6 yt-pl">
+                                      <button class="yt-booking-details-button">Itenary</button>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <button class="yt-booking-details-button">Check Refund Status</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="yt-ticket-services">
+                                <button id="slideLeft-ticket" type="button">&lt;</button>
+                                <div id="container-ticket">
+                                    <div id="content-ticket">
+                                        <ul>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                            <li>
+                                              <img src="images_my_bookings/email.svg" alt="">
+                                              <p>Print Ticket</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button id="slideRight-ticket" type="button">></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="yt-booking-details">
+                            <div class="yt-booking-details-name">
+                              <div class="row"> 
+                                <div class="col-md-4 col-6">
+                                  <i class="fa fa-plane"></i>
+                                  Total Passenger(s):1
+                                  <p>ADULT:1</p>
+                                </div>
+                                <div class="col-md-8 col-6">
+                                  <span class="yt-booking-info">Booked On:<b>25 Apr'19</b> | Booking Ref No:2504969145257</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="yt-booking-details-content">
+                              <div class="row vcenter">
+                                <div class="col-md-8 col-12 yt-border-right">
+                                  <div class="row vcenter">
+                                    <div class="col-md-4 col-4 yt-pr">
+                                      <div class="yt-flight-details">
+                                        IndiGo(6E-453)
+                                        <p>Economy</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Coimbatore
+                                        <p>23 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Mr Janarthan C M
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                    <div class="col-md-4 col-4 yt-pl yt-pr">
+                                      <div class="yt-flight-details">
+                                        PNR:SN2B8E
+                                        <p>Partially Refundable</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Mumbai
+                                        <p>23 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Status : <a>Completed</a>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="yt-break-line"></div>
+                                  <div class="row vcenter">
+                                    <div class="col-md-4 col-4 yt-pr">
+                                      <div class="yt-flight-details">
+                                        IndiGo(6E-6313)
+                                        <p>Economy</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Mumbai
+                                        <p>25 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Mr Janarthan C M
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      <i class="fa fa-arrow-right"></i>
+                                    </div>
+                                    <div class="col-md-4 col-4 yt-pl yt-pr">
+                                      <div class="yt-flight-details">
+                                        PNR:ILBBNX
+                                        <p>Partially Refundable</p>
+                                      </div>
+                                      <div class="yt-location-details">
+                                        Coimbatore
+                                        <p>25 Apr'19</p>
+                                      </div>
+                                      <div class="yt-passenger-details">
+                                        Status : <a>Completed</a>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-2 col-2">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4 col-12">
+                                  <div class="row">
+                                    <div class="col-md-6 col-6 yt-pr">
+                                      <button class="yt-booking-details-button">Fare Details</button>
+                                    </div>
+                                    <div class="col-md-6 col-6 yt-pl">
+                                      <button class="yt-booking-details-button">Itenary</button>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <button class="yt-booking-details-button">Check Refund Status</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <div class="yt-showing-div"> -->
+                            <!-- Showing 1-2 of 2 -->
+                            <div class="yt-button-div">
+                              <button>&lt;</button>
+                              <span>1</span>
+                              <button>></button>
+                            </div>
+                          <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="yt-profile">
+                            <img src="images_my_bookings/gu.svg" alt="">
+                            <p class="yt-profile-name">MS. DIYA SELVA</p>
+                            <div class="yt-profile-bb">
+                              <p>diyaselva1504@gmail.com</p>
+                              <p class="yt-profile-phone">Phone: +91-9442089780</p>
+                            </div>
+                          </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="yt-footer">
+            <div class="container"> 
+              <img src="images_my_bookings/footer.png" alt="">
+              <span class="yt-footer-social-media">
+                <img src="images_my_bookings/facebook_footer.png" alt="">
+                <img src="images_my_bookings/twitter_footer.png" alt="">
+                <img src="images_my_bookings/youtube_footer.png" alt="">
+                <img src="images_my_bookings/instagram_footer.png" alt="">
+              </span>
+              <span class="yt-footer-payment">
+                <img src="images_my_bookings/footer_payment.png" alt="">
+              </span>
+            </div>
+        </div>
+
+        <!-- copy rights -->
+        <div class="yt-copyright">
+        <p>Copyright © 2021 Yatra Online Private Limited, India. All rights reserved</p>
+        </div>
+    </div>
+
+    <script>
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+
+    buttonRight.onclick = function () {
+      document.getElementById('container-top-main-div').scrollLeft += 20;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('container-top-main-div').scrollLeft -= 20;
+    };
+
+    const buttonRightTicket = document.getElementById('slideRight-ticket');
+    const buttonLeftTicket = document.getElementById('slideLeft-ticket');
+
+    buttonRightTicket.onclick = function () {
+      document.getElementById('container-ticket').scrollLeft += 20;
+    };
+    buttonLeftTicket.onclick = function () {
+      document.getElementById('container-ticket').scrollLeft -= 20;
+    };
+        function myFunction() {
+            var x = document.getElementById("mobile-head-expand");
+            x.style.display = "block";
+        }
+        function closeNav() {
+            var x = document.getElementById("mobile-head-expand");
+            x.style.display = "none";
+        }
+        function modify_booking() {
+            var x = document.getElementById("modifybooking");
+            if(x.style.display==="block"){
+                x.style.display="none"
+            }
+            else{
+                x.style.display = "block";
+            }
+        }
+        function ticket() {
+            var x = document.getElementById("ticket");
+            if(x.style.display==="block"){
+                x.style.display="none"
+            }
+            else{
+                x.style.display = "block";
+            }
+        }
+        function ecash() {
+            var x = document.getElementById("ecash");
+            if(x.style.display==="block"){
+                x.style.display="none"
+            }
+            else{
+                x.style.display = "block";
+            }
+        }
+      </script>
+</body>
+</html>

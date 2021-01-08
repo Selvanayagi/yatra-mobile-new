@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Yatra</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style_my_bookings.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body>
+  <div class="yatra-booking">
+    <div class="yt-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="https://www.yatra.com/?_ga=2.91498266.1241220654.1608950245-733998492.1608804414"
+              title="https://www.yatra.com" class="logo">
+              <img src="https://www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg" class="yt-logo" alt="">
+            </a>
+          </div>
+          <div class="col-sm-8">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                    My Account
+                  </a>
+                  <div class="dropdown-menu yt-hotel-header-dropdown">
+                    <div class="yt-hotel-header-usericon">
+                      <i class="fa fa-user-circle"></i>
+                    </div>
+                    <div class="container">
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> My Bookings
+                      </div>
+
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> My eCash
+                      </div>
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> My Profile
+                      </div>
+                      <div class="yt-hotel-header-content">
+                        <i class="yt-fa-play"></i> Logout
+                      </div>
+                    </div>
+                    <div class="yt-hotel-dropdown-break"></div>
+                    <div class="container">
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Yatra for Business
+                      </div>
+
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Yatra for Travel Agents
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                    Support
+                  </a>
+                  <div class="dropdown-menu yt-hotel-header-dropdown">
+                    <div class="container">
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Contact us
+                      </div>
+
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Complete Booking
+                      </div>
+
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Make a Payment
+                      </div>
+
+                      <div class="yt-hotel-header-content">
+                        <i class="fa fa-play yt-fa-play"></i> Flight Cancellation Charges
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#"  data-toggle="dropdown">
+                    Recent Search
+                  </a>
+                  <div class="dropdown-menu yt-hotel-header-recent">
+                    <div class="container">
+                      <div class="row" style="width:100%">
+                        <div class="col-sm-9 yt-hotel-recent">
+                          Things you view while searching are saved here
+                        </div>
+                        <div class="col-sm-3 yt-hotel-recent-price">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Offers</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yt-mobile-header" id="mobile-header">
+      <div class="row">
+        <div class="col-4">
+          <span>
+            <button data-target="#mobile-head-expand" onclick="myFunction()">
+              <img src="images_my_bookings/header-mobile-nav.png" alt="">
+            </button>
+          </span>
+        </div>
+        <div class="col-8">
+          <img src="https://www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="yt-mobile-head-expand" id="mobile-head-expand">
+      <a href="javascript:void(0)" onclick="closeNav()">X</a>
+      <div class="header-expand-profile">
+        <span>
+          <i class="fa fa-user-circle"></i>
+        </span>
+        <div class="yt-display">
+          <h3>Diya</h3> 
+          <div>eCash</div>
+        </div>
+      </div>
+      <div class="header-expand-details">
+        <div>  
+          <span>
+            <img src="images_my_bookings/header_user.png" alt="">
+            My Account
+            <i class="fa fa-plus"></i>
+            </span>
+        </div>
+        <div>
+          <span>
+            <img src="images_my_bookings/header_info.png" alt="">
+            Support
+            <i class="fa fa-plus"></i>
+          </span>
+        </div>
+        <div>
+          <span>
+            <img src="images_my_bookings/categories.png" alt="">
+            Categories
+            <i class="fa fa-plus"></i>
+          </span>
+        </div>         
+        <div>
+          <span>
+            <img src="images_my_bookings/logout.png" alt="">
+            Logout
+          </span>
+        </div>       
+      </div>
+    </div>
+    <div class="yt-booking-main-div" id="main-div">
+      <div class="container">
+        <h3 class="yt-main-div-heading">
+          My Dashboard
+          <span class="yt-guide-me">
+            Guide Me
+          </span>
+        </h3>
+        <div>
+          <div class="yt-manage-booking">
+            <div class="row">
+              <div class="col-12">
+                Manage Booking
+              </div>
+            </div>
+          </div>
+          <div class="yt-manage-booking-content">
+            <div class="row">
+              <div class="col-md-3 col-12 yt-border-right">
+                <div class="yt-manage-booking-content-img">
+                  <img src="images_my_bookings/modify_booking.svg" alt="">
+                  <div class="yt-manage-booking-content-heading">
+                    MODIFY BOOKING
+                  </div>
+                </div>
+                <div class="yt-border-top">
+                  <div class="yt-manage-booking-content-list">
+                    <ul>
+                      <li>Cancel</li>
+                      <li>Reschedule</li>
+                      <li>Cancellation Charges</li>
+                      <li>Reschedule Charges</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-12 yt-border-right">
+                <div class="yt-manage-booking-content-img">
+                  <img src="images_my_bookings/ticket.svg" alt="">
+                  <div class="yt-manage-booking-content-heading">
+                    TICKET/VOUCHERS
+                  </div>
+                </div>
+                <div class="yt-border-top">
+                  <div class="yt-manage-booking-content-list">
+                    <ul>
+                      <li>SMS/Email Ticket</li>
+                      <li>Print Ticket</li>
+                      <li>Voucher</li>
+                      <li>Print Invoice/Receipt</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-12 yt-border-right">
+                <div class="yt-manage-booking-content-img">
+                  <img src="images_my_bookings/booking_details.svg" alt="">
+                  <div class="yt-manage-booking-content-heading">
+                    BOOKING DETAILS
+                  </div>
+                </div>
+                <div class="yt-border-top">
+                  <div class="yt-manage-booking-content-list">
+                    <ul>
+                      <li>Itinerary/Fare Details</li>
+                      <li>Make Payment</li>
+                      <li>View All Bookings</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-12">
+                <div class="yt-manage-booking-content-img">
+                  <img src="images_my_bookings/refund.svg" class="yt-refund-img" alt="">
+                  <div class="yt-manage-booking-content-heading">
+                    CLAIM REFUND
+                  </div>
+                </div>
+                <div class="yt-border-top">
+                  <div class="yt-manage-booking-content-list">
+                    <ul>
+                      <li>Track Flight Refund Status</li>
+                      <li>Cancelled Ticket via Airline</li>
+                      <li>Airline Cancelled the Flight</li>
+                      <li>Did not board the Flight</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="yt-details">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="yatra-specials">
+                Yatra Specials
+                <a href="view_all_bookings.html">View all bookings <i class="fa fa-play"></i></a>
+              </div>
+              <div class="yt-bookings">
+                <div class="carosel" id="carosel1">
+                  <a class="carosel-control carosel-control-left glyphicon glyphicon-chevron-left">&lt;</a>
+                  <div class="container">
+                    <div class="carosel-inner">
+                      <div class="carosel-item">
+                        <span class="yt-flights">
+                          FLIGHTS
+                        </span>
+                        <img src="images_my_bookings/payzapp.jpg" alt="">
+                        <div class="yt-carosel-content">
+                          <p class="yt-carosel-content-heading">Upto Rs. 1,000 OFF</p>
+                          <p class="carosel-content-sub-head">Pay with PayZapp</p>
+                          <p class="carosel-content-offer">Promo Code : YTPZ</p>
+                        </div>
+                      </div>
+              
+                      <div class="carosel-item">
+                        <img src="images_my_bookings/usa.jpg" alt="">
+                        <p class="yt-carosel-content-heading">Vande Bharat Mission</p>
+                        <p class="carosel-content-sub-head">Internation Flights</p>
+                        <p class="carosel-content-offer">With Air India</p>
+                      </div>
+              
+                      <div class="carosel-item">
+                        <img src="images_my_bookings/icici.jpg" alt="">
+                        <p class="yt-carosel-content-heading">Offer on ICICI Bank Credit Cards</p>
+                        <p class="carosel-content-sub-head">On EMI Tranactions</p>
+                        <p class="carosel-content-offer">Promo Code : ICICIEMI</p>
+                      </div>
+              
+                      <div class="carosel-item">
+                        <img src="images_my_bookings/limited.jpg" alt="">
+                        <p class="yt-carosel-content-heading">Exclusive deals</p>
+                        <p class="carosel-content-sub-head">On International Flights</p>
+                        <p class="carosel-content-offer">Promo code : YTINTFLY</p>
+                      </div>
+                      
+                      <div class="carosel-item">
+                        <img src="images_my_bookings/domestic.jpg" alt="">
+                        <p class="yt-carosel-content-heading">Amazing discounts</p>
+                        <p class="carosel-content-sub-head">On Domestic Flights</p>
+                        <p class="carosel-content-offer">Promocode : FREEFLY </p>
+                      </div>
+                      
+                      <div class="carosel-item">
+                        <img src="images_my_bookings/yatra_assue.jpg" alt="">
+                        <p class="yt-carosel-content-heading">Fare Drop Protection</p>
+                        <p class="carosel-content-sub-head">On International Flights</p>
+                        <p class="carosel-content-offer">Yatra Assure</p>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right">></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="yatra-specials">
+                eCash
+                <span>ALL TRANSACTIONS <i class="fa fa-play"></i></span>
+              </div>
+              <div class="yt-total-balance">
+                Total balance:
+                <span>
+                  <i class="fa fa-rupee"></i>0
+                </span>
+              </div>
+              <div class="yt-transfer">
+                Transfer to Friends & Family
+                <div class="yt-transferable">
+                  Transferable eCash
+                  <i class="fa fa-info-circle"></i>
+                  <span><i class="fa fa-rupee"></i>0</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-6">
+                    <div class="yt-share">
+                      <p>SHARE</p>
+                      <span>
+                        <img src="images_my_bookings/facebook.svg" alt="">
+                        <img src="images_my_bookings/twitter.svg" alt="">
+                        <img src="images_my_bookings/email.svg" alt="">
+                        <img src="images_my_bookings/whatsapp.svg" alt="">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-6">
+                    <button class="yt-transfer-button">Transfer Now</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 col-5">
+                    <div class="yt-profile-bb"></div>
+                  </div>
+                  <div class="col-md-2 col-2">
+                    <div class="yt_OR">OR</div>
+                  </div>
+                  <div class="col-md-5 col-5">
+                    <div class="yt-profile-bb"></div>
+                  </div>
+                </div>
+                
+                <div class="yt-convertible">
+                  <div>Convert to Coupons</div>
+                   
+                  <p>Convertible eCash</p>
+                  <i class="fa fa-info-circle"></i>
+                  <span><i class="fa fa-rupee"></i>0</span>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-6">
+                    <button class="yt-convertible-button-coupon">My Coupons</button>
+                  </div>
+                  <div class="col-md-6 col-6">
+                    <button class="yt-convertible-button">Convert</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-12">
+              <div class="yt-profile">
+                <img src="images_my_bookings/gu.svg" alt="">
+                <p class="yt-profile-name">MS. DIYA SELVA</p>
+                <div class="yt-profile-bb">
+                  <p>diyaselva1504@gmail.com</p>
+                  <p class="yt-profile-phone">Phone: +91-9442089780</p>
+                </div>
+              </div>
+              <div class="yt-communication">
+                Your Communication
+                <p>0</p>
+              </div>
+              <div class="yt-communication">
+                Special Offer
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yt-footer">
+      <div class="container"> 
+        <img src="images_my_bookings/footer.png" alt="">
+        <span class="yt-footer-social-media">
+          <img src="images_my_bookings/facebook_footer.png" alt="">
+          <img src="images_my_bookings/twitter_footer.png" alt="">
+          <img src="images_my_bookings/youtube_footer.png" alt="">
+          <img src="images_my_bookings/instagram_footer.png" alt="">
+        </span>
+        <span class="yt-footer-payment">
+          <img src="images_my_bookings/footer_payment.png" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="yt-copyright">
+      <p>Copyright © 2021 Yatra Online Private Limited, India. All rights reserved</p>
+    </div>
+  </div>
+  <script>
+    $('.carosel-control-right').click(function() {
+      $(this).blur();
+      $(this).parent().find('.carosel-item').first().insertAfter($(this).parent().find('.carosel-item').last());
+    });
+    $('.carosel-control-left').click(function() {
+      $(this).blur();
+      $(this).parent().find('.carosel-item').last().insertBefore($(this).parent().find('.carosel-item').first());
+    });
+    // function myFunction() {
+    //   var x = document.getElementById("mobile-head-expand");
+    //   var y = document.getElementById("mobile-header");
+    //   var z = document.getElementById("main-div");
+    //   if (x.style.display === "block") {
+    //     x.style.display = "none";
+    //   } else {
+    //     x.style.display = "block";
+    //     y.style.display = "none";
+    //     z.style.display = "none";
+    //   }
+    // }
+    // function closeNav() {
+    //   var x = document.getElementById("mobile-head-expand");
+    //   var y = document.getElementById("mobile-header");
+    //   var z = document.getElementById("main-div");
+    //   if (x.style.display === "block") {
+    //     x.style.display = "none";
+    //     y.style.display = "block";
+    //     z.style.display = "block";
+    //   } else {
+    //     x.style.display = "block";
+    //     y.style.display = "none";
+    //   }
+    // }
+    function myFunction() {
+      var x = document.getElementById("mobile-head-expand");
+      x.style.display = "block";
+    }
+    function closeNav() {
+      var x = document.getElementById("mobile-head-expand");
+      x.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
